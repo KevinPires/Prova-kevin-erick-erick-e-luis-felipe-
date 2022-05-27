@@ -48,3 +48,17 @@ export function fatorial(n){
     }
     return result;
 }
+
+export function sequenciapar(limite)
+{
+    let numeros = [];
+    let pos = 0;
+    
+    for(let i = 0; i <= limite; i++)
+        if(i % 2 == 0){
+            numeros[pos] = i
+            pos++
+    }
+
+    return numeros;
+}

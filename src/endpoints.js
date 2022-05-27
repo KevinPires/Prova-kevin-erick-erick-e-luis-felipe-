@@ -1,4 +1,4 @@
-import { semaforo, diasemana, fatorial} from "./services.js";
+import { semaforo, diasemana, fatorial, sequenciapar} from "./services.js";
 import { Router } from "express";
 
 
@@ -31,4 +31,14 @@ server.post ('/fatorial',(req,resp)=>{
         fatorial:d
     });
 })
+
+server.post ('/sequenciapar',(req,resp)=>{
+    let limite = req.body.limite;
+
+    const d= sequenciapar(limite);
+    resp.send({ 
+        sequenciapar:d
+    });
+})
+
  export default server;
